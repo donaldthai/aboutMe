@@ -22,6 +22,7 @@ body {
     -webkit-transform: rotate(-90deg); /* Safari and Chrome */
     -o-transform: rotate(-90deg); /* Opera */
     -moz-transform: rotate(-90deg); /* Firefox */
+    position: absolute;
 }
 
 .clear {
