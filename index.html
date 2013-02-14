@@ -56,6 +56,11 @@
                 }                
                 //we call the functino
                 initialize();
+                
+                var markPoint = $( "#marker" ).on( "click", function(event){
+                    codeAddress();
+                });
+                
             });//end of jquery
         </script>
     </head>
@@ -72,7 +77,7 @@
         <div class="clear"></div>
         <div>
             <input id="address" type="textbox" value="San Francisco, CA">
-            <input type="button" value="Place Marker" onclick="codeAddress()">
+            <input id="marker" type="button" value="Place Marker">
         </div>
         <div id="map_canvas"></div>
     </body>
