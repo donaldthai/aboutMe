@@ -23,6 +23,8 @@ body {
     -o-transform: rotate(-90deg); /* Opera */
     -moz-transform: rotate(-90deg); /* Firefox */
     position: absolute;
+    top: 50%;
+    margin-left: -3%;
 }
 
 .clear {
