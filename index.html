@@ -4,13 +4,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3J1biQst5EaR8On4-O2X3w1ginqg8gy4&sensor=true">
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js">
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3J1biQst5EaR8On4-O2X3w1ginqg8gy4&sensor=true"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
             
         </script>
         <script type="text/javascript">
             $( document ).ready(function() {
-                $( document ).ready(function() {
                 var map;
                 var geocoder;
                 //var marker;
@@ -38,8 +37,7 @@
 
                     var address = document.getElementById('address').value;
                     geocoder.geocode({
-                        'address': address
-                        }, function(results, status) {
+                        'address': address}, function(results, status) {
                             if (status == google.maps.GeocoderStatus.OK) {
                                 map.setCenter(results[0].geometry.location);
                                 var marker = new google.maps.Marker({
@@ -55,9 +53,7 @@
                                 alert("Geocode was not successful for the following reason: " + status);
                             }
                         });
-                    }
-                });
-                
+                }                
                 //we call the functino
                 initialize();
             });//end of jquery
