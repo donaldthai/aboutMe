@@ -24,7 +24,17 @@ body {
     -moz-transform: rotate(-90deg); /* Firefox */
     position: absolute;
     top: 50%;
-    width: 20px;
+    width: 8%;
+    margin-left: -3%;
+    margin-top: -10%;
+    transition: background-color 2s;
+    -webkit-transition: background-color 2s;
+    -o-transition: background-color 2s;
+    -moz-transition: background-color 2s;
+}
+
+#nodejs:hover {
+    background-color: gray;
 }
 
 .clear {
