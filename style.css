@@ -24,7 +24,7 @@ body {
     -moz-transform: rotate(-90deg); /* Firefox */
     position: absolute;
     top: 50%;
-    margin-left: -3%;
+    width: 20px;
 }
 
 .clear {
