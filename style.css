@@ -37,18 +37,6 @@ body {
     background-color: gray;
 }
 
-#hearts{
-    color: white;
-    transition: color 2s;
-    -webkit-transition: color 2s;
-    -o-transition: color 2s;
-    -moz-transition: color 2s;
-}
-
-#hearts:hover{
-    color: red;
-}
-
 .clear {
 	clear:both;
 }
