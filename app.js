@@ -27,27 +27,4 @@ http.createServer(function (req, res) {
 		res.end();
 	});
 
-	
-
-/*
-	var body = '<!DOCTYPE html>'+
-		'<html>'+
-		'<head>'+
-			'<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'+
-			'<style type="text/css">'+
-				'.profilePicture {'+
-					'text-align: center;'+
-				'}'+
-			'</style>'+
-		'</head>'+
-		'<body>'+
-			'<div class="profilePicture">'+
-		  	'<p>Hello! My name is Donald!</p>'+
-			'</div>'+
-		'</body>'+
-		'</html>';
-
-	res.writeHead(200, {"Content-TYpe": "text/html"});
-	res.write(body);
-	res.end();*/
 }).listen(process.env.VMC_APP_PORT || 1337, null);
