@@ -1,0 +1,18 @@
+doctype 5
+html
+  head
+    title #{title} - Donald Thai
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD3J1biQst5EaR8On4-O2X3w1ginqg8gy4&sensor=true')
+    script(src='/javascript/jquery-1.9.1.js')
+    script(src='/javascript/googlemaps.js')
+  body
+    header
+        h1 Donald Thai
+    .container
+      .main-content
+        block content
+      .sidebar
+        block sidebar
+    footer
+      p Running on node with Express, Jade and Stylus
