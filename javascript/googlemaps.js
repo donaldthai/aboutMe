@@ -98,4 +98,7 @@ $( document ).ready(function() {
                     deleteAllMarkers();
                 });
                 
+                //jquery ui tooltip
+                $( "#marker" ).tooltip();
+                
             });//end of jquery
