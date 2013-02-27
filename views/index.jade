@@ -15,6 +15,11 @@ block sidebar
     h1 Google Maps
     div.clear
     div
-        input#address(type="textbox", value="San Francisco, CA")
+        input#address(type="textbox", placeholder="Enter in location", value="San Francisco, CA")
         input#marker(type="button", value="Place Marker")
+        input#locationComment(type="textbox", placeholder="Put comments about location!", value="")
+        input#showMarkers(type="button", value="Re-Populate Markers")
+        input#clearMarkers(type="button", value="Clear Markers")
+        input#deleteAllMarkers(type="button", value="Delete All Markers")
+        
     div#map_canvas
