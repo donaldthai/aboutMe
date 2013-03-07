@@ -7,8 +7,14 @@ var nib = require('nib');
 var path = require('path');
 var http = require('http');
 var fs = require('fs');
+var crypto = require('crypto');
+
 
 var app = express();
+
+var fs = require('fs');
+
+
 
 /**
  * Adding in MongoDB services from appfog
@@ -62,10 +68,17 @@ app.configure(function() {
     app.use(express.static(__dirname));
 });
 
+//For gravatar images
+//hash md5
+var md5sum = crypto.createHash('md5');
+
+var pictureHash = md5sum.update(process.env.EMAIL_ADDRESS).digest('hex');
+
 
 app.get('/', function(req, res) {
     res.render('index', {
-        title: 'Home'
+        title: 'Home',
+        picHash: pictureHash
     });
     //res.end(__dirname)
 }).listen(process.env.VMC_APP_PORT || 1337, null);

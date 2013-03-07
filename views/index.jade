@@ -1,4 +1,11 @@
 extends layout
+block flipper
+  div.flip-container
+    div.flipper
+      div.front
+        img(src="http://www.gravatar.com/avatar/#{picHash}?s=200")
+      div.back
+        span HI!
 block content
   p
     | Welcome! My name is Donald!
