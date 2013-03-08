@@ -66,6 +66,7 @@ header
   /* back, initially hidden pane */
   .back
     transform rotateY(180deg)
+    
     span
       bottom 0
       position absolute
@@ -82,10 +83,17 @@ header
   font-weight bold
 
   h1
-    transition background-color 2s
-    -webkit-transition color 2s
-    -o-transition color 2s
-    -moz-transition color 2s
+    transition color 1s
+    
+    a
+      opacity .5
+      transition all .3s ease
+      
+    a:hover
+      opacity 1
+    
+    img
+      width 44px
     
   h1:hover
     color gray
@@ -128,14 +136,7 @@ header
       border-bottom 1px dotted #ddd
       border-radius 2px 2px 0px 0px
       margin-bottom 10px
-      transition background-color 2s
-      -webkit-transition color 2s
-      -o-transition color 2s
-      -moz-transition color 2s
     
-    h1:hover
-      color gray
-
     p
       font-size 13px
       padding 0px 10px
