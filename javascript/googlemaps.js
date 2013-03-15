@@ -3,6 +3,47 @@ $( document ).ready(function() {
                 var geocoder; // geolocation
                 var allmarkers = []; // holds all markers
 
+                var latitude;
+                var longitude;
+
+                /*geoPosition javascript start*/
+                function initializeGeo(){
+                    if(geoPosition.init()){  // Geolocation Initialisation
+                        geoPosition.getCurrentPosition(success_callback,error_callback,{enableHighAccuracy:true});
+                    }
+                    else{
+                        // You cannot use Geolocation in this device
+                        alert("Dafuq!? Can't use geolocation services for this thingy!! :(");
+                    }
+                    //geoPositionSimulator.init(); 
+                }
+
+                // p : geolocation object
+                function success_callback(p){
+                    // p.latitude : latitude value
+                    // p.longitude : longitude value
+                    
+                    //alert("Found you at latitude " + p.coords.latitude +
+                    //    ", longitude " + p.coords.longitude);
+                    
+                    //getting current user location
+                    latitude = p.coords.latitude;
+                    longitude = p.coords.longitude;
+                    
+                    //I guess we call it in here?
+                    $( "#address" ).val(latitude + " ," + longitude);
+                }
+
+                function error_callback(p){
+                    // p.message : error message
+                    
+                    alert("DAFUQ!? Y U NO SHARE GEOLOCATION!? :(((((");
+                }
+                /*geoPosition javascript end*/
+
+
+
+
                 function initialize() {
                     geocoder = new google.maps.Geocoder();
                     var latlng = new google.maps.LatLng(37.779649, - 122.420552);
@@ -85,6 +126,10 @@ $( document ).ready(function() {
                 //we call the functions
                 initialize();
                 //element marker, with on click function
+                $( "#userLocation").on( "click", function(event){
+                    initializeGeo(); 
+                    
+                });
                 $( "#marker" ).on( "click", function(event){
                     codeAddress();
                 });
