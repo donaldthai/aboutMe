@@ -9,15 +9,16 @@ var http = require('http');
 var fs = require('fs');
 var crypto = require('crypto');
 
-
+//creating the app
 var app = express();
-
+//opening filestream
 var fs = require('fs');
 
 
 
-/**
+/*
  * Adding in MongoDB services from appfog
+ * Doesn't do anything yet...
  */
 if (process.env.VCAP_SERVICES) {
     var env = JSON.parse(process.env.VCAP_SERVICES);
@@ -48,11 +49,11 @@ var mongourl = generate_mongo_url(mongo);
 //end of MongoDB services
 
 
-
+//using the modules stylus and nib
 function compile(str, path) {
     return stylus(str).set('filename', path).use(nib());
 }
-
+//configuring app pointing to the views
 app.configure(function() {
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
@@ -71,9 +72,7 @@ app.configure(function() {
 //For gravatar images
 //hash md5
 var md5sum = crypto.createHash('md5');
-
 var pictureHash = md5sum.update(process.env.EMAIL_ADDRESS).digest('hex');
-
 
 app.get('/', function(req, res) {
     res.render('index', {
@@ -83,7 +82,7 @@ app.get('/', function(req, res) {
     //res.end(__dirname)
 }).listen(process.env.VMC_APP_PORT || 1337, null);
 
-/*
+/* old way
 http.createServer(function (req, res) {
 
 	fs.readFile('./style.css', function (err, css) {

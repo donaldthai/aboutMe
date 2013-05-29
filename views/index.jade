@@ -23,11 +23,11 @@ block sidebar
     div.clear
     div
         input#address(type="textbox", title="Once a location is entered, feel free to enter in a comment about the location then hit 'Place Marker'", placeholder="Enter in a location", value="San Francisco, CA")
-        input#marker(type="button", value="Place Marker")
+        input#marker(type="button", value="Place Marker", title="Place marker on map at specified location")
         input#userLocation(type="button", title="This gets your current location if allowed.", value="Current Location")
         input#locationComment(type="textbox", placeholder="Put comments about location!", value="")
-        input#showMarkers(type="button", value="Re-Populate Markers")
-        input#clearMarkers(type="button", value="Clear Markers")
-        input#deleteAllMarkers(type="button", value="Delete All Markers")
+        input#showMarkers(type="button", value="Re-Populate Markers", title="Re-Populate markers on map after clearing the markers")
+        input#clearMarkers(type="button", value="Clear Markers", title="Clear the markers off the map")
+        input#deleteAllMarkers(type="button", value="Delete All Markers", title="Permanently delete the markers")
         
     div#map_canvas
