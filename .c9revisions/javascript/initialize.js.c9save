@@ -1,0 +1,5 @@
+{"ts":1369853785724,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1369853866701,"patch":[[{"diffs":[[1,"/**\n *  Loading defaults at the start of the page \n */\n \n$( document ).ready(function() {\n    \n    //jquery ui tooltip\n    $( document ).tooltip();\n});"]],"start1":0,"start2":0,"length1":0,"length2":151}]],"length":151,"saved":false}
+{"ts":1369854340619,"patch":[[{"diffs":[[0,"\n    $( "],[-1,"document"],[1,"\"#marker\""],[0," ).toolt"]],"start1":118,"start2":118,"length1":24,"length2":25}]],"length":152,"saved":false}
+{"ts":1369854972528,"patch":[[{"diffs":[[0," $( "],[-1,"\"#marker\""],[1,"document"],[0," ).t"]],"start1":122,"start2":122,"length1":17,"length2":16}]],"length":151,"saved":false}
+{"ts":1369855851706,"patch":[[{"diffs":[[0,"tip\n    "],[1,"//"],[0,"$( docum"]],"start1":115,"start2":115,"length1":16,"length2":18}]],"length":153,"saved":false}

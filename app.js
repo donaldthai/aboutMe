@@ -11,10 +11,6 @@ var crypto = require('crypto');
 
 //creating the app
 var app = express();
-//opening filestream
-var fs = require('fs');
-
-
 
 /*
  * Adding in MongoDB services from appfog
@@ -67,6 +63,8 @@ app.configure(function() {
     }));
     
     app.use(express.static(__dirname));
+    //Parser for POST requests, use req.body
+    app.use(express.bodyParser());
 });
 
 //For gravatar images
@@ -74,13 +72,18 @@ app.configure(function() {
 var md5sum = crypto.createHash('md5');
 var pictureHash = md5sum.update(process.env.EMAIL_ADDRESS).digest('hex');
 
+
+//server responses, aka Routes
 app.get('/', function(req, res) {
     res.render('index', {
         title: 'Home',
         picHash: pictureHash
     });
     //res.end(__dirname)
-}).listen(process.env.VMC_APP_PORT || 1337, null);
+});
+
+//Setting the app to listen on to the port, AppFog
+app.listen(process.env.VMC_APP_PORT || 1337, null);
 
 /* old way
 http.createServer(function (req, res) {
