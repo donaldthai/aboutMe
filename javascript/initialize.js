@@ -62,7 +62,7 @@ $( document ).ready(function() {
         })
         .done(function(data) {
             var jdata = JSON.parse(data);
-            alert('Server Reponse, echoing back:' + jdata.message);
+            alert('Server Reponse, echoing back: \n\n' + jdata.message);
         });
     });
 
