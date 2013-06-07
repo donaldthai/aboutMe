@@ -82,6 +82,22 @@ app.get('/', function(req, res) {
     //res.end(__dirname)
 });
 
+app.post('/message', function(req, res, next){
+    console.log(req.body);
+    //res.setHeader("Content-Type", "application/json");
+    //res.writeHead({"Content-Type" : "application/json"});
+    //res.contentType('application/json');
+    //res.contentType('text/plain');
+    //res.send(JSON.stringify(req.body.user));
+    //res.send('_testcb(\'{"message": "Hello world!"}\')');
+    //res.end('<script>alert('+JSON.stringify(req.body.user)+')</script>');
+    //res.send();
+    res.set({'Content-Type': 'application/json'});
+    //the json object turned back into serialized form so have to
+    //stringify it again, then send it back
+    res.send('messageCB(\''+JSON.stringify(req.body)+'\')');
+});
+
 //Setting the app to listen on to the port, AppFog
 app.listen(process.env.VMC_APP_PORT || 1337, null);
 
