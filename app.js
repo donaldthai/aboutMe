@@ -39,6 +39,7 @@ app.configure(function() {
 var md5sum = crypto.createHash('md5');
 var pictureHash = md5sum.update(process.env.EMAIL_ADDRESS).digest('hex');
 
+app.set('port', (process.env.PORT || 5000));
 
 //server responses, aka Routes
 app.get('/', function(req, res) {
