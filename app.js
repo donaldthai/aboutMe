@@ -34,12 +34,6 @@ app.configure(function() {
     app.use(express.bodyParser());
 });
 
-//For gravatar images
-//hash md5
-var md5sum = crypto.createHash('md5');
-var pictureHash = md5sum.update(process.env.EMAIL_ADDRESS).digest('hex');
-
-
 //server responses, aka Routes
 app.get('/', function(req, res) {
     res.render('index', {
