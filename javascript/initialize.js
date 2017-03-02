@@ -26,7 +26,7 @@ $( document ).ready(function() {
 
     $('#messageForm').on('submit', function(e) {
         e.preventDefault();
-        
+
         console.log('Button clicked');
         //serializeObject turns into { hello : 'world' }
         //JSON.stringify turns into { "hello" : "world" }
@@ -42,7 +42,7 @@ $( document ).ready(function() {
             dataType: 'jsonp',
             jsonpCallback: "messageCB",
             data: formData, //send the json object
-            
+
             /*
             complete: function() {
                 console.log('process complete');
@@ -50,7 +50,7 @@ $( document ).ready(function() {
             success: function(data) {
                 console.log('success');
                 console.log(JSON.stringify(data));
-                
+
                 //Need to do something with data
                 //var jData = $.parseJSON(data);
                 //alert(jData.message);
