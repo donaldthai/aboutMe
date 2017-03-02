@@ -7,7 +7,6 @@ var nib = require('nib');
 var path = require('path');
 var http = require('http');
 var fs = require('fs');
-var crypto = require('crypto');
 
 //creating the app
 var app = express();
