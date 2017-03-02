@@ -65,6 +65,11 @@ app.post('/message', function(req, res, next){
     res.send('messageCB(\''+JSON.stringify(req.body)+'\')');
 });
 
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
+
+
 /* old way
 http.createServer(function (req, res) {
 
